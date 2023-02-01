@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: #efefef;
+}
+
+header {
+  background-color: #43281c;
+  color: #fbf2c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+}
+
+header img {
+  height: 2.25em;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "order payment" "total total";
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 2em;
+}
+
+.box {
+  background-color: #eee1df;
+  border-radius: 0.25em;
+  box-shadow: 0 1px 3px #0000007a;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.box-title {
+  color: #885a2d;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-areas: "quantity title price" "quantity options price";
+  grid-template-columns: 1fr 8fr 1fr;
+  row-gap: 8px;
+  border-bottom: 2px solid #ddb892;
+  padding: 10px 0;
+}
+
+.item-title,
+.item-price,
+.final-totals {
+  font-weight: bold;
+}
+
+.item-options-list {
+  grid-area: options;
+  color: #b08968;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.payment {
+  grid-area: payment;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.user-input {
+  width: 100%;
+  border-radius: 100px;
+  padding: 8px;
+  text-indent: 18px;
+  font-size: 18px;
+  background-color: #0000;
+  border: 2px solid #885a2d;
+}
+
+.user-input-label {
+  color: #885a2d;
+  background-color: #eee1df;
+  font-size: 11px;
+  position: absolute;
+  left: 25px;
+  top: -7px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: total;
+}
+
+.totals-table {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+td {
+  padding: 10px;
+}
+
+.checkout {
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #deb993;
+}
